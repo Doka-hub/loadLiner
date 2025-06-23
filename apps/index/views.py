@@ -9,11 +9,10 @@ class IndexTemplateView(TemplateView):
 
     template_name = "index.html"
 
-    def get_context_data(self, **kwargs):
-        """Add the title to context."""
-        context = super().get_context_data(**kwargs)
-        context["title"] = "Landing Page"
-        return context
+class AboutTemplateView(TemplateView):
+    """Main landing page view."""
+
+    template_name = "about.html"
 
 
 class CallRequestView(CreateView):

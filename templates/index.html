@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
-{% block meta %}
+
+{% block html_attrs %}
+	data-wf-page="660eb6abe8cde3bea6a9c11d" data-wf-site="660eb6abe8cde3bea6a9c111"
+{% endblock %}
+
+{% block head %}
 	<meta charset="utf-8"/>
 	<title>FreezPak Logistics - Leading Cold Storage and Logistics Solutions Nationwide</title>
 	<meta content="We go beyond the traditional role of a logistics provider; we&#x27;re your reliable partner in cold chain management. With a rich history rooted in family values and over 25 years of hands-on industry experience, we&#x27;ve grown to become a top-tier 4PL provider." name="description"/>
@@ -31,927 +36,346 @@
 	gtag('set', 'developer_id.dZGVlNj', true);
 	gtag('config', 'G-2JLJP1HZML');</script>
 	<style>
-		/* Typography */
-		html, body {
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			text-rendering: optimizeLegibility;
-			font-feature-settings: "liga", "kern";
-			font-variant-numeric: proportional-nums;
-		}
-		
-		a {
-			color: inherit;
-		}
-		
-		
-		/* Visually hidden styles, sr only */
-		.visually-hidden {
-			clip: rect(0 0 0 0);
-			clip-path: inset(50%);
-			height: 1px;
-			overflow: hidden;
-			position: absolute;
-			white-space: nowrap;
-			width: 1px;
-		}
-		
-		/* Global hide class */
-		.hide {
-			display: none;
-		}
-		
-		/* When the mobile menu or some other modal is open */
-		body.disable-scroll {
-			overflow: hidden;
-		}
-		
-		/* Show header when is navigated by keyboard */
-		.header:focus-within {
-			transform: translate3d(0px, 0%, 0px) !important;
-		}
-		
-		/* Form components */
-		.radio-button:has(.w--redirected-checked) {
-			box-shadow: inset 0 0 0 1px var(--text-icon--default--main);
-		}
-		
-		.input-date::-webkit-inner-spin-button, ::-webkit-calendar-picker-indicator {
-			opacity: 0;
-		}
-		
-		@supports not selector(::-webkit-calendar-picker-indicator) {
-			.input-date {
-				background-image: none;
-			}
-		}
+        /* Typography */
+        html, body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga", "kern";
+            font-variant-numeric: proportional-nums;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* Visually hidden styles, sr only */
+        .visually-hidden {
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        /* Global hide class */
+        .hide {
+            display: none;
+        }
+
+        /* When the mobile menu or some other modal is open */
+        body.disable-scroll {
+            overflow: hidden;
+        }
+
+        /* Show header when is navigated by keyboard */
+        .header:focus-within {
+            transform: translate3d(0px, 0%, 0px) !important;
+        }
+
+        /* Form components */
+        .radio-button:has(.w--redirected-checked) {
+            box-shadow: inset 0 0 0 1px var(--text-icon--default--main);
+        }
+
+        .input-date::-webkit-inner-spin-button, ::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+
+        @supports not selector(::-webkit-calendar-picker-indicator) {
+            .input-date {
+                background-image: none;
+            }
+        }
 	</style>
 	<style>
-		/* Header always visible */
-		.header--not-move {
-			transform: none !important;
-		}
-		
-		/* Services section */
-		@media screen and (min-width: 991px) {
-			.services-row:focus-within {
-				background-color: var(--fill--default--main-inverse) !important;
-				color: var(--text-icon--default--strong-inverse) !important;
-			}
-			
-			.services-row:focus-within .services-row__content {
-				opacity: 1 !important;
-			}
-			
-			.services-row:focus-within .services-row__image {
-				display: block !important;
-			}
-		}
-		
-		/* Safari bug fix */
-		@media screen and (max-width: 991px) {
-			@supports not (aspect-ratio) {
-				.about-section__image {
-					height: calc(40vw * 1 / 1);
-					min-width: 100%;
-				}
-			}
-		}
+        /* Header always visible */
+        .header--not-move {
+            transform: none !important;
+        }
+
+        /* Services section */
+        @media screen and (min-width: 991px) {
+            .services-row:focus-within {
+                background-color: var(--fill--default--main-inverse) !important;
+                color: var(--text-icon--default--strong-inverse) !important;
+            }
+
+            .services-row:focus-within .services-row__content {
+                opacity: 1 !important;
+            }
+
+            .services-row:focus-within .services-row__image {
+                display: block !important;
+            }
+        }
+
+        /* Safari bug fix */
+        @media screen and (max-width: 991px) {
+            @supports not (aspect-ratio) {
+                .about-section__image {
+                    height: calc(40vw * 1 / 1);
+                    min-width: 100%;
+                }
+            }
+        }
 	</style>
 {% endblock %}
 {% block content %}
-
-<header data-w-id="00563912-a2ad-4c28-30f6-eff7a7e6acce" class="header">
-	<div data-w-id="00563912-a2ad-4c28-30f6-eff7a7e6accf" data-animation="default" data-collapse="medium" data-duration="0" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
-		<div class="container container--navbar">
-			<a href="/" aria-current="page" class="brand brand--navbar w-nav-brand w--current">
-				<img src="/static/assets/660eb6abe8cde3bea6a9c111/660fd4294dec140f700b07e4_freezpack-logo.svg" loading="lazy" width="207" height="32" alt="FreezPak Home" class="brand__img"/>
-			</a>
-			<nav role="navigation" class="nav-menu w-nav-menu">
-				<div class="nav-menu__content">
-					<div class="nav-menu__links">
-						<div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-							<div class="nav-dropdown__toggle body-1 body-1--medium w-dropdown-toggle">
-								<div class="nav-drodpdown__text nav-dropdown__text--services">
-									<span class="nav-link__text-mobile">Our </span>Services
+	{% include 'components/header.html' %}
+	<main class="main">
+		<div class="home-fold">
+			<div data-w-id="9fe42c3a-4bfe-e2cd-37cd-e892b2e05a99" class="fold-animaction">
+				<div class="fold-animation__container">
+					<div data-is-ix2-target="1" class="fold-animation__lottie fold-animation__lottie--desktop" data-w-id="9fe42c3a-4bfe-e2cd-37cd-e892b2e05a9a" data-animation-type="lottie" data-src="/static/assets/660eb6abe8cde3bea6a9c111/6669c2d77776396910ac1f10_freezpak-logistics.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="40" data-duration="0"></div>
+					<div data-is-ix2-target="1" class="fold-animation__lottie fold-animation__lottie--mobile" data-w-id="2575a56a-5e7c-b1b4-655f-d1fcb3ddf5f2" data-animation-type="lottie" data-src="/static/assets/660eb6abe8cde3bea6a9c111/666ab8b5b624df6d15a73b5d_freezpak-logistics-mobile.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="40" data-duration="0"></div>
+					<div class="fold-animation__texts">
+						<div class="container container--fold-animation">
+							<h1 class="home-fold__title">Peace of mind.<br/>Delivered.</h1>
+							<div class="home-fold__content">
+								<p class="home-fold__text home-fold__text--1">The life cycle of a shipment with FreezPak begins with your goods arriving at the port, where our team coordinates unloading and inspections efficiently.</p>
+								<p class="home-fold__text home-fold__text--2">Your freight is seamlessly transported to our nearest facility, which is equipped with advanced technology to ensure your product’s integrity.</p>
+								<p class="home-fold__text home-fold__text--3">Your goods are placed in our cold storage, where temperature conditions are precisely controlled while efficiently preparing shipments for dispatch.</p>
+								<p class="home-fold__text home-fold__text--4">Cooler boxes and temperature-controlled solutions guarantee that sensitive products maintain their freshness during transit.</p>
+								<p class="home-fold__text home-fold__text--5">Our comprehensive transportation network guarantees timely and secure transportation, whether by land, air, or sea.</p>
+								<p class="home-fold__text home-fold__text--6">The final stage of this journey involves last-mile delivery. We ensure the prompt and safe arrival of your products at your customer&#x27;s doorstep. </p>
+								<p class="home-fold__text home-fold__text--7">You have full visibility and control of your goods during transit and can contact our customer support for assistance.</p>
+							</div>
+							<div class="home-fold__skip">
+								<a href="#services" class="button button--md w-inline-block"><span class="button__text">Skip introduction</span></a>
+								<div class="home-fold__skip-bar">
+									<div class="home-fold__bar-item"></div>
 								</div>
-							</div>
-							<div class="nav-dropdown__content nav-dropdown__content--services w-dropdown-list">
-								<div class="w-dyn-list">
-									<div role="list" class="nav-dropdown__list w-dyn-items">
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/cold-storage" class="nav-dropdown__link">Cold Storage</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/crossdocking" class="nav-dropdown__link">Crossdocking</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/container-unloading" class="nav-dropdown__link">Container Unloading</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/transportation" class="nav-dropdown__link">Transportation</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/inspections" class="nav-dropdown__link">Inspections</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/repacking" class="nav-dropdown__link">Repacking</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/ecommerce" class="nav-dropdown__link">Ecommerce</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/blast-freezing" class="nav-dropdown__link">Blast Freezing</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/customs-bonded" class="nav-dropdown__link">Customs Bonded</a>
-										</div>
-										<div role="listitem" class="nav-dropdown__item w-dyn-item">
-											<a href="http://www.freezpak.com/services/trichinosis" class="nav-dropdown__link">Trichinosis</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="nav-menu__links">
-						<div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-							<div data-w-id="2ba53349-aa46-06b6-79f3-8172f4986b75" class="nav-dropdown__toggle nav-dropdown__toggle--locations w-dropdown-toggle">
-								<div class="nav-drodpdown__text">Locations</div>
-								<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="nav-dropdown__icon">
-									<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-								</svg>
-							</div>
-							<div class="nav-dropdown__content nav-dropdown__content--locations w-dropdown-list">
-								<button data-w-id="8bd641e4-c407-043f-0527-21c4aab452e8" class="nav-dropdown__button">
-									<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg">
-										<path d="M5.85201 10.3979L5.85199 10.3978C5.79969 10.3456 5.7582 10.2835 5.72989 10.2153C5.70158 10.147 5.68701 10.0738 5.68701 9.99986C5.68701 9.92594 5.70158 9.85274 5.72989 9.78446C5.7582 9.71617 5.79969 9.65413 5.85199 9.60189L5.85201 9.60187L12.102 3.35187C12.2076 3.24631 12.3507 3.18701 12.5 3.18701C12.6493 3.18701 12.7924 3.24631 12.898 3.35187C13.0036 3.45742 13.0629 3.60058 13.0629 3.74986C13.0629 3.89913 13.0036 4.0423 12.898 4.14785C12.898 4.14785 12.898 4.14785 12.898 4.14785L7.08941 9.95566L7.0452 9.99986L7.08941 10.0441L12.898 15.8519C12.9503 15.9041 12.9917 15.9662 13.02 16.0345C13.0483 16.1028 13.0629 16.1759 13.0629 16.2499C13.0629 16.3238 13.0483 16.397 13.02 16.4653C12.9917 16.5335 12.9503 16.5956 12.898 16.6479C12.8457 16.7001 12.7837 16.7416 12.7154 16.7699C12.6471 16.7981 12.5739 16.8127 12.5 16.8127C12.4261 16.8127 12.3529 16.7981 12.2846 16.7699C12.2163 16.7416 12.1543 16.7001 12.102 16.6479L5.85201 10.3979Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-									</svg>
-									<span>Locations</span></button>
-								<ul role="list" class="nav-dropdown__list nav-dropdown__list--second nav-dropdown__list--secondary w-list-unstyled">
-									<li class="nav-dropdown__item nav-dropdown__item-padding">
-										<a href="http://www.freezpak.com/locations" class="nav-dropdown__link body-1 body-1--medium">All locations</a>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle w-dropdown-toggle">
-												<div class="body-1 body-1--medium">New Jersey (NJ)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/paterson-nj" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Paterson</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">162 Railroad Avenue. Paterson, NJ 07501</span><span class="nav-dropdown__phone body-2">(973) 523-1899</span></a>
-													</li>
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/carteret-nj" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Carteret</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">760B Port Carteret Drive. Carteret, NJ 07008</span><span class="nav-dropdown__phone body-2">(973) 523-1899</span></a>
-													</li>
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/wayne-nj" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Wayne</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">6 Westbelt Ave. Wayne, NJ 07470</span><span class="nav-dropdown__phone body-2">(973) 523-1899</span></a>
-													</li>
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/elizabeth-nj" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Elizabeth</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">1029 Newark Ave. Elizabeth, NJ 07208</span><span class="nav-dropdown__phone body-2">(908) 316-0005</span></a>
-													</li>
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/woodbridge-nj" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Woodbridge</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">2 Paddock St. Woodbridge, NJ 07001</span><span class="nav-dropdown__phone body-2">(973) 561-0040</span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle w-dropdown-toggle">
-												<div class="body-1 body-1--medium">Florida (FL)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/miami-fl" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Miami </span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">3995 W 108th St. Hialeah, FL 33018 </span><span class="nav-dropdown__phone body-2">(305) 203-1006</span></a>
-													</li>
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/jacksonville-fl" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Jacksonville</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">8730 Somers Rd S. Jacksonville, FL 32218<span class="nav-dropdown__phone body-2">(904) 869-3070</span></span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle w-dropdown-toggle">
-												<div class="body-1 body-1--medium">Illinois (IL)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/chicago-il" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Chicago</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">7101 S Leamington Ave. Bedford Park, IL 60638<span class="nav-dropdown__phone body-2">(708) 929-1580</span></span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle w-dropdown-toggle">
-												<div class="body-1 body-1--medium">Texas (TX)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/houston-tx" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Houston</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">7818 Fisher Rd.. Baytown, TX 77523</span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle w-dropdown-toggle">
-												<div class="body-1 body-1--medium">Pennsylvania (PA)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/philadelphia-pa" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Philadelphia</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">1801 N. 5th Street. Philadelphia, PA 19122</span><span class="nav-dropdown__phone body-2">(973) 523-1899</span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle-copy w-dropdown-toggle">
-												<div class="body-1 body-1--medium">Virginia (VA)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/suffolk-va" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Suffolk</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">115-125 Maya Wy Suffolk, VA 23435</span><span class="nav-dropdown__accent body-2">Projected to open Q2 2025</span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle-copy w-dropdown-toggle">
-												<div class="body-1 body-1--medium">Massachusetts (MA)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/boston-ma" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Boston</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2"> Innovation Way Fall River MA 02720</span><span class="nav-dropdown__accent body-2">Projected to open Q2 2026</span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-									<li class="nav-dropdown__item nav-dropdown__item--second">
-										<div data-delay="0" data-hover="false" class="nav-dropdown nav-dropdown--second w-dropdown">
-											<div class="nav-dropdown__link nav-dropdown__second-toggle-copy w-dropdown-toggle">
-												<div class="body-1 body-1--medium">California (CA)</div>
-												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M14.6484 10.3978L14.6483 10.3979L8.39834 16.6479C8.34608 16.7001 8.28403 16.7416 8.21574 16.7699C8.14745 16.7981 8.07426 16.8127 8.00035 16.8127C7.92643 16.8127 7.85324 16.7981 7.78495 16.7699C7.71667 16.7416 7.65462 16.7001 7.60235 16.6479C7.55009 16.5956 7.50863 16.5335 7.48034 16.4653C7.45206 16.397 7.4375 16.3238 7.4375 16.2499C7.4375 16.1759 7.45206 16.1028 7.48034 16.0345C7.50863 15.9662 7.55009 15.9041 7.60235 15.8519L13.4109 10.0441L13.4551 9.99986L13.4109 9.95566L7.60235 4.14785C7.60235 4.14785 7.60235 4.14785 7.60235 4.14785C7.4968 4.0423 7.4375 3.89913 7.4375 3.74986C7.4375 3.60058 7.4968 3.45742 7.60235 3.35187C7.70791 3.24631 7.85107 3.18701 8.00035 3.18701C8.14962 3.18701 8.29279 3.24631 8.39834 3.35187L14.6483 9.60187L14.6484 9.60189C14.7007 9.65413 14.7422 9.71617 14.7705 9.78446C14.7988 9.85274 14.8133 9.92594 14.8133 9.99986C14.8133 10.0738 14.7988 10.147 14.7705 10.2153C14.7422 10.2835 14.7007 10.3456 14.6484 10.3978Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-												</svg>
-											</div>
-											<div class="nav-dropdown__content nav-dropdown__content--second w-dropdown-list">
-												<ul role="list" class="nav-dropdown__list nav-dropdown__list--second w-list-unstyled">
-													<li class="nav-dropdown__item nav-dropdown__item--second">
-														<a href="http://www.freezpak.com/locations/los-angeles-ca" class="nav-dropdown__link nav-dropdown__link--second w-inline-block"><span class="nav-dropdown__row"><span class="body-1 body-1--medium">Los Angeles</span><span class="nav-drodpdown__button button button--inverse-outline button--xs"><img width="20" height="20" alt="" src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" class="button__icon"/></span></span><span class="nav-dropdown__address body-2">3050 E Washington Blvd Los Angeles, CA 90023</span></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="nav-menu__links">
-						<a href="http://www.freezpak.com/about" class="nav-link body-1 body-1--medium w-nav-link">About Us</a><a href="http://www.freezpak.com/news-events" class="nav-link body-1 body-1--medium w-nav-link">News &amp; Events</a><a href="http://www.freezpak.com/careers" class="nav-link body-1 body-1--medium w-nav-link">Careers</a>
-					</div>
-					<div class="nav-menu__actions">
-						<a href="http://www.freezpak.com/contact" class="button button--accent button--talk-nav w-inline-block"><span class="button__text">Talk to us</span></a>
-						<div class="nav-menu__links nav-menu__links--login">
-							<div data-hover="false" data-delay="0" class="nav-dropdown w-dropdown">
-								<div class="button button--subtle button--subtile-inverse-outline button-login--desktop w-dropdown-toggle">
-									<div class="nav-drodpdown__text nav-dropdown__text--login">Log in</div>
-								</div>
-								<div class="nav-dropdown__content nav-dropdown__content--login w-dropdown-list">
-									<ul role="list" class="nav-dropdown__list w-list-unstyled">
-										<li class="nav-dropdown__item">
-											<a href="https://wm1.freezpak.com/webportal" target="_blank" class="nav-dropdown__link">Warehouse Portal</a>
-										</li>
-										<li class="nav-dropdown__item">
-											<a href="https://tms.freezpak.com/" target="_blank" class="nav-dropdown__link body-1 body-1--medium">Transportation Portal</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-			<div class="menu-button w-nav-button">
-				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="menu-button__icon menu-button__icon--open">
-					<path d="M17.4375 10C17.4375 10.1492 17.3782 10.2923 17.2727 10.3977C17.1673 10.5032 17.0242 10.5625 16.875 10.5625H3.125C2.97582 10.5625 2.83274 10.5032 2.72725 10.3977C2.62176 10.2923 2.5625 10.1492 2.5625 10C2.5625 9.85082 2.62176 9.70774 2.72725 9.60225C2.83274 9.49676 2.97582 9.4375 3.125 9.4375H16.875C17.0242 9.4375 17.1673 9.49676 17.2727 9.60225C17.3782 9.70774 17.4375 9.85082 17.4375 10ZM16.875 5.5625H3.125C2.97582 5.5625 2.83274 5.50324 2.72725 5.39775C2.62176 5.29226 2.5625 5.14918 2.5625 5C2.5625 4.85082 2.62176 4.70774 2.72725 4.60225C2.83274 4.49676 2.97582 4.4375 3.125 4.4375H16.875C17.0242 4.4375 17.1673 4.49676 17.2727 4.60225C17.3782 4.70774 17.4375 4.85082 17.4375 5C17.4375 5.14918 17.3782 5.29226 17.2727 5.39775C17.1673 5.50324 17.0242 5.5625 16.875 5.5625ZM3.125 14.4375H16.875C17.0242 14.4375 17.1673 14.4968 17.2727 14.6023C17.3782 14.7077 17.4375 14.8508 17.4375 15C17.4375 15.1492 17.3782 15.2923 17.2727 15.3977C17.1673 15.5032 17.0242 15.5625 16.875 15.5625H3.125C2.97582 15.5625 2.83274 15.5032 2.72725 15.3977C2.62176 15.2923 2.5625 15.1492 2.5625 15C2.5625 14.8508 2.62176 14.7077 2.72725 14.6023C2.83274 14.4968 2.97582 14.4375 3.125 14.4375Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-				</svg>
-				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="menu-button__icon menu-button__icon--close">
-					<path d="M10.0441 10.8393L9.99986 10.7951L9.95566 10.8393L4.77285 16.0229C4.6673 16.1284 4.52414 16.1877 4.37486 16.1877C4.22558 16.1877 4.08242 16.1284 3.97687 16.0229C3.87131 15.9173 3.81201 15.7741 3.81201 15.6249C3.81201 15.4756 3.87131 15.3324 3.97687 15.2269L9.16046 10.0441L9.20466 9.99986L9.16046 9.95566L3.97687 4.77285C3.97686 4.77285 3.97686 4.77285 3.97686 4.77285C3.87131 4.6673 3.81201 4.52413 3.81201 4.37486C3.81201 4.22558 3.87131 4.08242 3.97687 3.97687C4.08242 3.87131 4.22558 3.81201 4.37486 3.81201C4.52413 3.81201 4.6673 3.87131 4.77285 3.97686C4.77285 3.97686 4.77285 3.97686 4.77285 3.97687L9.95566 9.16046L9.99986 9.20466L10.0441 9.16046L15.2269 3.97686C15.3324 3.87131 15.4756 3.81201 15.6249 3.81201C15.7741 3.81201 15.9173 3.87131 16.0229 3.97687C16.1284 4.08242 16.1877 4.22558 16.1877 4.37486C16.1877 4.52414 16.1284 4.6673 16.0229 4.77285L10.8393 9.95566L10.7951 9.99986L10.8393 10.0441L16.0229 15.2269C16.0751 15.2791 16.1166 15.3412 16.1449 15.4095C16.1731 15.4778 16.1877 15.5509 16.1877 15.6249C16.1877 15.6988 16.1731 15.772 16.1449 15.8403C16.1166 15.9085 16.0751 15.9706 16.0229 16.0229C15.9706 16.0751 15.9085 16.1166 15.8403 16.1449C15.772 16.1731 15.6988 16.1877 15.6249 16.1877C15.5509 16.1877 15.4778 16.1731 15.4095 16.1449C15.3412 16.1166 15.2791 16.0751 15.2269 16.0229L10.0441 10.8393Z" fill="currentColor" stroke="currentColor" stroke-width="0.125"></path>
-				</svg>
-			</div>
-		</div>
-	</div>
-</header>
-<main class="main">
-	<div class="home-fold">
-		<div data-w-id="9fe42c3a-4bfe-e2cd-37cd-e892b2e05a99" class="fold-animaction">
-			<div class="fold-animation__container">
-				<div data-is-ix2-target="1" class="fold-animation__lottie fold-animation__lottie--desktop" data-w-id="9fe42c3a-4bfe-e2cd-37cd-e892b2e05a9a" data-animation-type="lottie" data-src="/static/assets/660eb6abe8cde3bea6a9c111/6669c2d77776396910ac1f10_freezpak-logistics.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="40" data-duration="0"></div>
-				<div data-is-ix2-target="1" class="fold-animation__lottie fold-animation__lottie--mobile" data-w-id="2575a56a-5e7c-b1b4-655f-d1fcb3ddf5f2" data-animation-type="lottie" data-src="/static/assets/660eb6abe8cde3bea6a9c111/666ab8b5b624df6d15a73b5d_freezpak-logistics-mobile.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="40" data-duration="0"></div>
-				<div class="fold-animation__texts">
-					<div class="container container--fold-animation">
-						<h1 class="home-fold__title">Peace of mind.<br/>Delivered.</h1>
-						<div class="home-fold__content">
-							<p class="home-fold__text home-fold__text--1">The life cycle of a shipment with FreezPak begins with your goods arriving at the port, where our team coordinates unloading and inspections efficiently.</p>
-							<p class="home-fold__text home-fold__text--2">Your freight is seamlessly transported to our nearest facility, which is equipped with advanced technology to ensure your product’s integrity.</p>
-							<p class="home-fold__text home-fold__text--3">Your goods are placed in our cold storage, where temperature conditions are precisely controlled while efficiently preparing shipments for dispatch.</p>
-							<p class="home-fold__text home-fold__text--4">Cooler boxes and temperature-controlled solutions guarantee that sensitive products maintain their freshness during transit.</p>
-							<p class="home-fold__text home-fold__text--5">Our comprehensive transportation network guarantees timely and secure transportation, whether by land, air, or sea.</p>
-							<p class="home-fold__text home-fold__text--6">The final stage of this journey involves last-mile delivery. We ensure the prompt and safe arrival of your products at your customer&#x27;s doorstep. </p>
-							<p class="home-fold__text home-fold__text--7">You have full visibility and control of your goods during transit and can contact our customer support for assistance.</p>
-						</div>
-						<div class="home-fold__skip">
-							<a href="#services" class="button button--md w-inline-block"><span class="button__text">Skip introduction</span></a>
-							<div class="home-fold__skip-bar">
-								<div class="home-fold__bar-item"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<section id="services" class="services-section">
-		<div class="container container--medium">
-			<h2 class="services-section__title title-1">Our Services</h2></div>
-		<div class="w-dyn-list">
-			<div role="list" class="w-dyn-items">
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Cold Storage</h3>
-							<div class="services-row__content">
-								<p class="body-1">FreezPak Logistics, a top-five leader in cold storage, provides industry-leading solutions with unmatched reliability, innovation, and customer satisfaction.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/cold-storage" class="text-link text-link--accent services-row__mobile-link">More details</a>
+		<section id="services" class="services-section">
+			<div class="container container--medium">
+				<h2 class="services-section__title title-1">Our Services</h2></div>
+			<div class="w-dyn-list">
+				<div role="list" class="w-dyn-items">
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Cold Storage</h3>
+								<div class="services-row__content">
+									<p class="body-1">FreezPak Logistics, a top-five leader in cold storage, provides industry-leading solutions with unmatched reliability, innovation, and customer satisfaction.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/cold-storage" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/cold-storage" class="service-row__link w-inline-block"><span class="visually-hidden">Cold Storage</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/cold-storage" class="service-row__link w-inline-block"><span class="visually-hidden">Cold Storage</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Crossdocking</h3>
-							<div class="services-row__content">
-								<p class="body-1">Streamline your logistics with FreezPak’s efficient cross docking, reducing handling and storage costs while accelerating product delivery.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/crossdocking" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Crossdocking</h3>
+								<div class="services-row__content">
+									<p class="body-1">Streamline your logistics with FreezPak’s efficient cross docking, reducing handling and storage costs while accelerating product delivery.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/crossdocking" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/crossdocking" class="service-row__link w-inline-block"><span class="visually-hidden">Crossdocking</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/crossdocking" class="service-row__link w-inline-block"><span class="visually-hidden">Crossdocking</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Container Unloading</h3>
-							<div class="services-row__content">
-								<p class="body-1">FreezPak Logistics offers expert container unloading services that are tailored to optimize efficiency and reduce labor costs. Our adept team is well-versed in handling both floor unloading and container loading operations, ensuring a seamless and cost-effective process.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/container-unloading" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Container Unloading</h3>
+								<div class="services-row__content">
+									<p class="body-1">FreezPak Logistics offers expert container unloading services that are tailored to optimize efficiency and reduce labor costs. Our adept team is well-versed in handling both floor unloading and container loading operations, ensuring a seamless and cost-effective process.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/container-unloading" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/container-unloading" class="service-row__link w-inline-block"><span class="visually-hidden">Container Unloading</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/container-unloading" class="service-row__link w-inline-block"><span class="visually-hidden">Container Unloading</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Transportation</h3>
-							<div class="services-row__content">
-								<p class="body-1">FreezPak Logistics excels in providing a comprehensive suite of transportation services designed to meet the diverse needs of our clients:</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/transportation" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Transportation</h3>
+								<div class="services-row__content">
+									<p class="body-1">FreezPak Logistics excels in providing a comprehensive suite of transportation services designed to meet the diverse needs of our clients:</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/transportation" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/transportation" class="service-row__link w-inline-block"><span class="visually-hidden">Transportation</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/transportation" class="service-row__link w-inline-block"><span class="visually-hidden">Transportation</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Inspections</h3>
-							<div class="services-row__content">
-								<p class="body-1">FreezPak Logistics takes pride in offering a comprehensive suite of inspection services that includes USDA (United States Department of Agriculture), FDA (Food and Drug Administration), and FSIS (Food Safety and Inspection Service). Our commitment to ensuring the highest standards of quality and compliance is reflected in our strategic approach to regulatory requirements.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/inspections" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Inspections</h3>
+								<div class="services-row__content">
+									<p class="body-1">FreezPak Logistics takes pride in offering a comprehensive suite of inspection services that includes USDA (United States Department of Agriculture), FDA (Food and Drug Administration), and FSIS (Food Safety and Inspection Service). Our commitment to ensuring the highest standards of quality and compliance is reflected in our strategic approach to regulatory requirements.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/inspections" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/inspections" class="service-row__link w-inline-block"><span class="visually-hidden">Inspections</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/inspections" class="service-row__link w-inline-block"><span class="visually-hidden">Inspections</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Repacking</h3>
-							<div class="services-row__content">
-								<p class="body-1">Our repacking services are designed to optimize product presentation, enhance shelf appeal, and ensure compliance with specific retail or distribution requirements.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/repacking" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Repacking</h3>
+								<div class="services-row__content">
+									<p class="body-1">Our repacking services are designed to optimize product presentation, enhance shelf appeal, and ensure compliance with specific retail or distribution requirements.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/repacking" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/repacking" class="service-row__link w-inline-block"><span class="visually-hidden">Repacking</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/repacking" class="service-row__link w-inline-block"><span class="visually-hidden">Repacking</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Ecommerce</h3>
-							<div class="services-row__content">
-								<p class="body-1">Recognizing the unique challenges posed by transporting perishable goods, particularly in the e-commerce landscape, FreezPak provides innovative solutions to ensure the integrity and freshness of each product.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/ecommerce" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Ecommerce</h3>
+								<div class="services-row__content">
+									<p class="body-1">Recognizing the unique challenges posed by transporting perishable goods, particularly in the e-commerce landscape, FreezPak provides innovative solutions to ensure the integrity and freshness of each product.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/ecommerce" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/ecommerce" class="service-row__link w-inline-block"><span class="visually-hidden">Ecommerce</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/ecommerce" class="service-row__link w-inline-block"><span class="visually-hidden">Ecommerce</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Blast Freezing</h3>
-							<div class="services-row__content">
-								<p class="body-1">Our Blast Freezing service is designed to preserve the integrity, taste, and quality of your perishable products. Using state-of-the-art technology, we rapidly freeze products at extremely low temperatures to ensure that food maintains its nutritional value and texture, meeting the highest standards of safety and freshness.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/blast-freezing" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Blast Freezing</h3>
+								<div class="services-row__content">
+									<p class="body-1">Our Blast Freezing service is designed to preserve the integrity, taste, and quality of your perishable products. Using state-of-the-art technology, we rapidly freeze products at extremely low temperatures to ensure that food maintains its nutritional value and texture, meeting the highest standards of safety and freshness.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/blast-freezing" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/blast-freezing" class="service-row__link w-inline-block"><span class="visually-hidden">Blast Freezing</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/blast-freezing" class="service-row__link w-inline-block"><span class="visually-hidden">Blast Freezing</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Customs Bonded</h3>
-							<div class="services-row__content">
-								<p class="body-1">FreezPak’s Customs Bonded service provides a seamless solution for managing imported goods under customs control. With our bonded facilities, you can store goods without immediate payment of duties or taxes, ensuring smoother operations and optimized cash flow. Our team of experts works diligently to handle the complexities of customs requirements so you can focus on your business.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/customs-bonded" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Customs Bonded</h3>
+								<div class="services-row__content">
+									<p class="body-1">FreezPak’s Customs Bonded service provides a seamless solution for managing imported goods under customs control. With our bonded facilities, you can store goods without immediate payment of duties or taxes, ensuring smoother operations and optimized cash flow. Our team of experts works diligently to handle the complexities of customs requirements so you can focus on your business.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/customs-bonded" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/customs-bonded" class="service-row__link w-inline-block"><span class="visually-hidden">Customs Bonded</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/customs-bonded" class="service-row__link w-inline-block"><span class="visually-hidden">Customs Bonded</span></a>
 					</div>
-				</div>
-				<div role="listitem" class="w-dyn-item">
-					<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
-						<div class="container container--services-row container--medium">
-							<h3 class="services-row__title hightlight">Trichinosis</h3>
-							<div class="services-row__content">
-								<p class="body-1">FreezPak Logistics offers a comprehensive range of cold storage and supply chain solutions across its facilities, tailored to meet the unique needs of the food industry, including specialized trichinosis services. These services focus on ensuring the safe handling, storage, and distribution of pork and other meats that require specific processes to eliminate the risk of trichinosis, a parasitic infection.</p>
-								<p class="text-link text-link--accent services-row__desktop-text">More details</p>
-								<a href="http://www.freezpak.com/services/trichinosis" class="text-link text-link--accent services-row__mobile-link">More details</a>
+					<div role="listitem" class="w-dyn-item">
+						<div data-w-id="d29d14d8-ccb5-2e8d-35ed-932b4f9931b2" class="services-row">
+							<div class="container container--services-row container--medium">
+								<h3 class="services-row__title hightlight">Trichinosis</h3>
+								<div class="services-row__content">
+									<p class="body-1">FreezPak Logistics offers a comprehensive range of cold storage and supply chain solutions across its facilities, tailored to meet the unique needs of the food industry, including specialized trichinosis services. These services focus on ensuring the safe handling, storage, and distribution of pork and other meats that require specific processes to eliminate the risk of trichinosis, a parasitic infection.</p>
+									<p class="text-link text-link--accent services-row__desktop-text">More details</p>
+									<a href="http://www.freezpak.com/services/trichinosis" class="text-link text-link--accent services-row__mobile-link">More details</a>
+								</div>
 							</div>
+							<a href="http://www.freezpak.com/services/trichinosis" class="service-row__link w-inline-block"><span class="visually-hidden">Trichinosis</span></a>
 						</div>
-						<a href="http://www.freezpak.com/services/trichinosis" class="service-row__link w-inline-block"><span class="visually-hidden">Trichinosis</span></a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="locations-section">
-		<div class="container container--medium">
-			<h2 class="locations-section__title title-1">Our Locations</h2>
-			<p class="locations-section__subtitle h3">THE FreezPak Network of Facilities</p>
-			<div class="locations-section__map">
-				<div class="w-embed w-script">
-					<mapplic-map data-json="https://mapplic.com/getMapData?id=9GyqO67EedKhH8jtp9EW">
-						<script type="text/javascript" id="mapplic-script" src="https://mapplic.com/mapplic.js"></script>
-					</mapplic-map>
+		</section>
+		<section class="about-section">
+			<div class="container container--about container--medium">
+				<div class="about-section__gallery">
+					<div id="w-node-_787d3f62-deab-6031-0386-cc2bbe6b2a5e-a6a9c11d" class="about-section__image">
+						<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large.jpeg" loading="lazy" width="486" height="357" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large.jpeg 1280w" sizes="(max-width: 767px) 100vw, 485.99609375px" class="about-section__img"/>
+					</div>
+					<div class="about-section__image">
+						<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large.jpeg" loading="lazy" width="235" height="171" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large.jpeg 1280w" sizes="235px" class="about-section__img"/>
+					</div>
+					<div class="about-section__image">
+						<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large.jpeg" loading="lazy" width="235" height="171" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large.jpeg 1280w" sizes="235px" class="about-section__img"/>
+					</div>
+					<div id="w-node-_081f4d14-7180-c022-6c5e-58b6bf6127fa-a6a9c11d" class="about-section__image">
+						<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large.jpeg" loading="lazy" width="235" height="357" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large.jpeg 1280w" sizes="235px" class="about-section__img"/>
+					</div>
+				</div>
+				<div class="about-section__content">
+					<h2 class="about-section__title title-1">About us</h2>
+					<p class="about-section__subttile h3">MORE THAN JUST LOGISTICS. </p>
+					<p class="about-section__text title-2">FreezPak is a family-owned company with a legacy of innovation and integrity. From our beginnings, we’ve been dedicated to revolutionizing temperature-controlled logistics with cutting-edge technology and a commitment to excellence. Our core values—honesty, reliability, and customer focus—drive us to deliver exceptional service and build lasting relationships. At FreezPak, we’re not just a logistics provider; we’re your trusted partner, committed to supporting your success with personalized and innovative solutions.</p>
+					<a href="/about" class="button button--subtle w-inline-block"><img src="/static/assets/660eb6abe8cde3bea6a9c111/66140dbb67e390a2359bd879_icon-plus.svg" loading="lazy" width="20" height="20" alt="" class="button__icon button__icon--md"/><span class="button__text visually-hidden">About us</span><span class="button__text">Learn more</span></a>
 				</div>
 			</div>
-			<p class="locations-section__text title-2">Strategically located near major transportation hubs, our state-of-the-art facilities ensure unmatched accessibility and convenience. This enables us to optimize logistics, saving you valuable time and resources.</p>
-			<a href="http://www.freezpak.com/contact" class="button button--accent w-inline-block"><span class="button__text">Talk to us</span></a>
-		</div>
-		<div class="locations-section__half-bg">
+		</section>
+		<section class="banner-section banner-section--home">
 			<div class="container">
-				<div data-delay="4000" data-animation="slide" class="service-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
-					<div class="mask w-slider-mask">
-						<div class="slide w-slide">
-							<div class="service-slide">
-								<div class="service-slider__content">
-									<p class="service-banner__upper title-3">Transportation Services</p>
-									<h3 class="service-banner__title hightlight">Drayage</h3>
-									<p class="service-banner__text body-1">FreezPak’s drayage services provide seamless transportation for your refrigerated and frozen goods between ports and distribution centers. Our expertise in temperature-controlled logistics ensures your products are maintained at the required temperature, preserving their quality and safety during short-haul transfers.</p>
-									<a href="http://www.freezpak.com/services/transportation" class="button button--md button--details-service w-inline-block"><img src="/static/assets/660eb6abe8cde3bea6a9c111/66b46cc74aaa68e42a7025fb_Plus_white.svg" loading="lazy" width="20" height="20" alt="" class="button__icon button__icon--md"/><span class="button__text visually-hidden">Drayage</span><span class="button__text">Learn more</span></a>
-								</div>
-								<div class="service-banner__image">
-									<img src="/static/assets/660eb6abe8cde3bea6a9c111/66b46dcdae1b6eb98245e9ea_PORT.png" loading="lazy" width="590" height="397" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/66b46dcdae1b6eb98245e9ea_PORT-p-500.png 500w, /static/assets/660eb6abe8cde3bea6a9c111/66b46dcdae1b6eb98245e9ea_PORT-p-800.png 800w, /static/assets/660eb6abe8cde3bea6a9c111/66b46dcdae1b6eb98245e9ea_PORT-p-1080.png 1080w, /static/assets/660eb6abe8cde3bea6a9c111/66b46dcdae1b6eb98245e9ea_PORT.png 1158w" sizes="(max-width: 767px) 100vw, 590px" class="service-banner__img"/>
-								</div>
-							</div>
-						</div>
-						<div class="w-slide">
-							<div class="service-slide">
-								<div class="service-slider__content">
-									<p class="service-banner__upper title-3">Transportation Services</p>
-									<h3 class="service-banner__title hightlight">Full truckload</h3>
-									<p class="service-banner__text body-1">FreezPak&#x27;s drayage services provide seamless transportation for your refrigerated and frozen goods between ports and distribution centers. Our expertise in temperature-controlled logistics ensures your products are maintained at the required temperature, preserving their quality and safety during short-haul transfers.</p>
-									<a href="http://www.freezpak.com/services/transportation" class="button button--md button--details-service w-inline-block"><img src="/static/assets/660eb6abe8cde3bea6a9c111/66b46cc74aaa68e42a7025fb_Plus_white.svg" loading="lazy" width="20" height="20" alt="" class="button__icon button__icon--md"/><span class="button__text visually-hidden">Full truckload</span><span class="button__text">Learn more</span></a>
-								</div>
-								<div class="service-banner__image">
-									<img src="/static/assets/660eb6abe8cde3bea6a9c111/66b473d0070899e47f7a99c9_LAST%20MILLE.png" loading="lazy" width="590" height="397" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/66b473d0070899e47f7a99c9_LAST%20MILLE-p-500.png 500w, /static/assets/660eb6abe8cde3bea6a9c111/66b473d0070899e47f7a99c9_LAST%20MILLE-p-800.png 800w, /static/assets/660eb6abe8cde3bea6a9c111/66b473d0070899e47f7a99c9_LAST%20MILLE.png 902w" sizes="(max-width: 767px) 100vw, 590px" class="service-banner__img"/>
-								</div>
-							</div>
-						</div>
-						<div class="w-slide">
-							<div class="service-slide">
-								<div class="service-slider__content">
-									<p class="service-banner__upper title-3">Transportation Services</p>
-									<h3 class="service-banner__title hightlight">Less-Than-Truckload</h3>
-									<p class="service-banner__text body-1">Our Less Than Truckload (LTL) services are designed for businesses needing to ship smaller quantities of temperature-sensitive goods. FreezPak&#x27;s advanced refrigeration technology and meticulous handling procedures ensure your products remain at the perfect temperature throughout transit.</p>
-									<a href="http://www.freezpak.com/services/transportation" class="button button--md button--details-service w-inline-block"><img src="/static/assets/660eb6abe8cde3bea6a9c111/66b46cc74aaa68e42a7025fb_Plus_white.svg" loading="lazy" width="20" height="20" alt="" class="button__icon button__icon--md"/><span class="button__text visually-hidden">Less-Than-Truckload</span><span class="button__text">Learn more</span></a>
-								</div>
-								<div class="service-banner__image">
-									<img src="/static/assets/660eb6abe8cde3bea6a9c111/66b473d0ad56f74beeadff1a_TRUCK%20OPEN.png" loading="lazy" width="590" height="397" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/66b473d0ad56f74beeadff1a_TRUCK%20OPEN-p-500.png 500w, /static/assets/660eb6abe8cde3bea6a9c111/66b473d0ad56f74beeadff1a_TRUCK%20OPEN-p-800.png 800w, /static/assets/660eb6abe8cde3bea6a9c111/66b473d0ad56f74beeadff1a_TRUCK%20OPEN.png 989w" sizes="(max-width: 767px) 100vw, 590px" class="service-banner__img"/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="button button--md button--slider-service button--slider-prev w-slider-arrow-left">
-						<img src="/static/assets/660eb6abe8cde3bea6a9c111/66b47381f02c7e511b6f231f_arrow_left_whote.svg" loading="lazy" alt="" class="button__icon button__icon--md"/>
-					</div>
-					<div class="button button--md button--slider-service button--slider-next w-slider-arrow-right">
-						<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" alt="" class="button__icon button__icon--md"/>
-					</div>
-					<div class="hide-element w-slider-nav w-round w-num"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="about-section">
-		<div class="container container--about container--medium">
-			<div class="about-section__gallery">
-				<div id="w-node-_787d3f62-deab-6031-0386-cc2bbe6b2a5e-a6a9c11d" class="about-section__image">
-					<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large.jpeg" loading="lazy" width="486" height="357" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd25488532adb7f6ad19_Freezer%20-%20133%20Large.jpeg 1280w" sizes="(max-width: 767px) 100vw, 485.99609375px" class="about-section__img"/>
-				</div>
-				<div class="about-section__image">
-					<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large.jpeg" loading="lazy" width="235" height="171" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bc09a05b31ae079901808_FreezPak%20-%20327%20Large.jpeg 1280w" sizes="235px" class="about-section__img"/>
-				</div>
-				<div class="about-section__image">
-					<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large.jpeg" loading="lazy" width="235" height="171" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bc0997b9290b9f0b96730_FreezPak%20-%20343%20Large.jpeg 1280w" sizes="235px" class="about-section__img"/>
-				</div>
-				<div id="w-node-_081f4d14-7180-c022-6c5e-58b6bf6127fa-a6a9c11d" class="about-section__image">
-					<img src="/static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large.jpeg" loading="lazy" width="235" height="357" alt="" srcset="/static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large-p-500.jpeg 500w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large-p-800.jpeg 800w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large-p-1080.jpeg 1080w, /static/assets/660eb6abe8cde3bea6a9c111/672bcd26f07626630da892c7_Freezer%20-%20124%20Large.jpeg 1280w" sizes="235px" class="about-section__img"/>
-				</div>
-			</div>
-			<div class="about-section__content">
-				<h2 class="about-section__title title-1">About us</h2>
-				<p class="about-section__subttile h3">MORE THAN JUST LOGISTICS. </p>
-				<p class="about-section__text title-2">FreezPak is a family-owned company with a legacy of innovation and integrity. From our beginnings, we’ve been dedicated to revolutionizing temperature-controlled logistics with cutting-edge technology and a commitment to excellence. Our core values—honesty, reliability, and customer focus—drive us to deliver exceptional service and build lasting relationships. At FreezPak, we’re not just a logistics provider; we’re your trusted partner, committed to supporting your success with personalized and innovative solutions.</p>
-				<a href="http://www.freezpak.com/about" class="button button--subtle w-inline-block"><img src="/static/assets/660eb6abe8cde3bea6a9c111/66140dbb67e390a2359bd879_icon-plus.svg" loading="lazy" width="20" height="20" alt="" class="button__icon button__icon--md"/><span class="button__text visually-hidden">About us</span><span class="button__text">Learn more</span></a>
-			</div>
-		</div>
-	</section>
-	<section class="banner-section banner-section--home">
-		<div class="container">
-			<div class="feedback-banner">
-				<div class="feedback-banner__bg-image"></div>
-				<div class="feedback-banner__bg-gradient"></div>
-				<div class="feedback-banner__header">
-					<h2 class="feedback-banner__title large-title">Client’s feedback</h2></div>
-				<div class="feedback-banner__content">
-					<p class="feedback-banner__text">FreezPak Logistics, their team meticulously analyzed our supply chain processes and implemented strategic solutions to streamline the transportation and storage of our products. By leveraging their expertise, FreezPak managed to cut down lead times significantly, ensuring a quicker turnaround from distribution centers to our stores.</p>
-					<p class="feedback-banner__client title-3">foodservice industry</p>
-					<a href="index.html#" class="button button--inverse-outline w-inline-block"><span class="button__text visually-hidden">foodservice industry</span><span class="button__text">Read full story</span></a>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
-<footer class="footer">
-	<div class="container container--footer container--medium">
-		<a href="index.html" aria-current="page" class="brand w-inline-block w--current"><img src="/static/assets/660eb6abe8cde3bea6a9c111/660fd4294dec140f700b07e4_freezpack-logo.svg" loading="lazy" width="207" height="32" alt="FreezPak Home" class="brand__img"/></a>
-		<nav aria-label="secondary" class="footer__navigation">
-			<div class="footer__menu"><p class="title-2">Our Services</p>
-				<div class="w-dyn-list">
-					<div role="list" class="footer__list w-dyn-items">
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/cold-storage" class="footer__link title-3">Cold Storage</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/crossdocking" class="footer__link title-3">Crossdocking</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/container-unloading" class="footer__link title-3">Container Unloading</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/transportation" class="footer__link title-3">Transportation</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/inspections" class="footer__link title-3">Inspections</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/repacking" class="footer__link title-3">Repacking</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/ecommerce" class="footer__link title-3">Ecommerce</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/blast-freezing" class="footer__link title-3">Blast Freezing</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/customs-bonded" class="footer__link title-3">Customs Bonded</a>
-						</div>
-						<div role="listitem" class="w-dyn-item">
-							<a href="http://www.freezpak.com/services/trichinosis" class="footer__link title-3">Trichinosis</a>
-						</div>
+				<div class="feedback-banner">
+					<div class="feedback-banner__bg-image"></div>
+					<div class="feedback-banner__bg-gradient"></div>
+					<div class="feedback-banner__header">
+						<h2 class="feedback-banner__title large-title">Client’s feedback</h2></div>
+					<div class="feedback-banner__content">
+						<p class="feedback-banner__text">FreezPak Logistics, their team meticulously analyzed our supply chain processes and implemented strategic solutions to streamline the transportation and storage of our products. By leveraging their expertise, FreezPak managed to cut down lead times significantly, ensuring a quicker turnaround from distribution centers to our stores.</p>
+						<p class="feedback-banner__client title-3">foodservice industry</p>
+						<a href="index.html#" class="button button--inverse-outline w-inline-block"><span class="button__text visually-hidden">foodservice industry</span><span class="button__text">Read full story</span></a>
 					</div>
 				</div>
 			</div>
-			<div class="footer__menu">
-				<a href="http://www.freezpak.com/about" class="footer__link footer__link--main title-2">About us</a><a href="http://www.freezpak.com/news-events" class="footer__link footer__link--main title-2">News &amp; events</a><a href="http://www.freezpak.com/careers" class="footer__link footer__link--main title-2">Careers</a><a href="http://www.freezpak.com/contact" class="footer__link footer__link--main title-2">Contact</a>
-			</div>
-			<div id="w-node-ddfec69f-dca2-10d3-0bd4-8cc845f5e68e-45f5e667" class="footer__menu">
-				<p class="title-2">Locations</p>
-				<a href="http://www.freezpak.com/locations" class="footer__link title-3">All locations</a>
-				<ul role="list" class="footer__list w-list-unstyled">
-					<li>
-						<div data-hover="false" data-delay="0" data-w-id="ddfec69f-dca2-10d3-0bd4-8cc845f5e693" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">New Jersey (NJ)  </div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Paterson</p>
-											<a href="http://www.freezpak.com/locations/paterson-nj" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Paterson</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">162 Railroad Avenue. Paterson, NJ 07501</p>
-										<p class="location-card__text body-2">(973) 523-1899</p>
-									</li>
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Carteret</p>
-											<a href="http://www.freezpak.com/locations/carteret-nj" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Carteret</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">760B Port Carteret Drive. Carteret, NJ 07008</p>
-										<p class="location-card__text body-2">(973) 523-1899</p>
-									</li>
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Wayne</p>
-											<a href="http://www.freezpak.com/locations/wayne-nj" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Wayne</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">6 Westbelt Ave. Wayne, NJ 07470</p>
-										<p class="location-card__text body-2">(973) 523-1899</p>
-									</li>
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Elizabeth</p>
-											<a href="http://www.freezpak.com/locations/elizabeth-nj" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Elizabeth</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">1029 Newark Ave. Elizabeth, NJ 07208</p>
-										<p class="location-card__text body-2">(908) 316-0005</p>
-									</li>
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Woodbridge</p>
-											<a href="http://www.freezpak.com/locations/wayne-nj" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Wayne</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">2 Paddock St. Woodbridge, NJ 07001</p>
-										<p class="location-card__text body-2">(973) 561-0040</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" data-w-id="ddfec69f-dca2-10d3-0bd4-8cc845f5e6b3" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">Florida (FL) </div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Miami</p>
-											<a href="http://www.freezpak.com/locations/miami-fl" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Miami</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">3995 W 108th St. Hialeah, FL 33018</p>
-										<p class="location-card__text body-2">(305) 203-1006</p>
-									</li>
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Jacksonville</p>
-											<a href="http://www.freezpak.com/locations/jacksonville-fl" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Jacksonville</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">8730 Somers Rd S. Jacksonville, FL 32218<br/>(904) 869-3070
-										</p></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" data-w-id="ddfec69f-dca2-10d3-0bd4-8cc845f5e6d3" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">Illinois (IL)  </div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Chicago</p>
-											<a href="http://www.freezpak.com/locations/chicago-il" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Chicago</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">7101 S Leamington Ave. Bedford Park, IL 60638</p>
-										<p class="location-card__text body-2">(708) 929-1580</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" data-w-id="ddfec69f-dca2-10d3-0bd4-8cc845f5e6f3" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">Texas (TX)  </div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Houston</p>
-											<a href="http://www.freezpak.com/locations/houston-tx" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Houston</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">7818 Fisher Rd.. Baytown, TX 77523<br/>(832) 553-8111
-										</p></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" data-w-id="ddfec69f-dca2-10d3-0bd4-8cc845f5e713" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">Pennsylvania (PA)</div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Philadelphia</p>
-											<a href="http://www.freezpak.com/locations/philadelphia-pa" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Philadelphia</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">2201 East Allegheny Avenue Philadelphia, PA, 19134</p>
-										<p class="location-card__text body-2">(215) 309-6000</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" data-w-id="599fb285-ec9e-8a6f-3ca5-d40d1be2a1aa" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">Virginia (VA)</div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Suffolk</p>
-											<a href="http://www.freezpak.com/locations/philadelphia-pa-2" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Suffolk</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">115-125 Maya Wy Suffolk, VA 23435</p>
-										<p class="location-card__text location-card__text--accent body-2">Projected to open Q2 2025</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">Massachusetts (MA)</div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Boston</p>
-											<a href="http://www.freezpak.com/locations/boston-ma" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Boston</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">1 Innovation Way Fall River MA 02720</p>
-										<p class="location-card__text location-card__text--accent body-2">Projected to open Q2 2026</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div data-hover="false" data-delay="0" class="footer-dropdown w-dropdown">
-							<div class="footer-dropdown__toggle w-dropdown-toggle">
-								<div class="title-3">California (CA)</div>
-								<img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b991a255d4281c73af66_icon-chevron-right.svg" loading="lazy" width="20" height="20" alt="" class="footer-dropdown__icon"/>
-							</div>
-							<div class="footer-dropdown__content w-dropdown-list">
-								<ul role="list" class="w-list-unstyled">
-									<li class="location-card">
-										<div class="location-card__row">
-											<p class="location-card__title title-3">Los Angeles</p>
-											<a href="http://www.freezpak.com/locations/los-angeles-ca" class="button button--inverse-outline button--xs w-inline-block"><span class="button__text visually-hidden">Los Angeles</span><img src="/static/assets/660eb6abe8cde3bea6a9c111/6613b4032d2b67ee0b211ef7_icon-arrow-right.svg" loading="lazy" width="20" height="20" alt="" class="button__icon"/></a>
-										</div>
-										<p class="location-card__text body-2">3050 E Washington Blvd Los Angeles, CA 90023</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<div class="footer__navbar"><p class="body-2">2025 © Copyrights to Freezpak Logistics.
-			<a href="http://www.freezpak.com/terms-conditions" class="text-link text-link--inverse">Terms &amp; Conditions</a> |
-			<a href="http://www.freezpak.com/privacy-policy" class="text-link text-link--inverse">Privacy Policy</a>
-		</p></div>
-	</div>
-</footer>
-<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=660eb6abe8cde3bea6a9c111" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.schunk.4a394eb5af8156f2.js" type="text/javascript"></script>
-<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.schunk.c2aa238619ecee8d.js" type="text/javascript"></script>
-<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.schunk.10e6a56b850fda1f.js" type="text/javascript"></script>
-<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.3650062e.73ae4793d235120f.js" type="text/javascript"></script>
-<script>
-	// Mobile menu disable scroll
-	var width = $(window).width();
-	
-	if (width < 992) {
-		Webflow.push(function () {
-			$(".menu-button").on("click", function (e) {
-				e.preventDefault();
-				$("body").toggleClass("disable-scroll");
+		</section>
+	</main>
+	{% include 'components/footer.html' %}
+	<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=660eb6abe8cde3bea6a9c111" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.schunk.4a394eb5af8156f2.js" type="text/javascript"></script>
+	<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.schunk.c2aa238619ecee8d.js" type="text/javascript"></script>
+	<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.schunk.10e6a56b850fda1f.js" type="text/javascript"></script>
+	<script src="/static/assets/660eb6abe8cde3bea6a9c111/js/webflow.3650062e.73ae4793d235120f.js" type="text/javascript"></script>
+	<script>
+		// Mobile menu disable scroll
+		var width = $(window).width();
+		
+		if (width < 992) {
+			Webflow.push(function () {
+				$(".menu-button").on("click", function (e) {
+					e.preventDefault();
+					$("body").toggleClass("disable-scroll");
+				});
 			});
-		});
-	}
-</script>
-<script>
-	const header = document.querySelector(".header");
-	const homeFold = document.querySelector(".home-fold");
-	
-	window.addEventListener("load", (event) => {
-		header.classList.add("header--not-move");
-	});
-	
-	// Set the initial scroll position
-	let lastScrollPosition = 0;
-	// // Add an event listener for the scroll event
-	window.addEventListener("scroll", () => {
-		// Get the current scroll position
-		let currentScrollPosition = window.pageYOffset;
-		
-		let foldOffset = homeFold.offsetHeight;
-		
-		if (currentScrollPosition < foldOffset) {
-			// If the user is scrolling the fold
-			header.classList.add("header--not-move");
-		} else {
-			header.classList.remove("header--not-move");
 		}
-	});
-</script>
+	</script>
+	<script>
+		const header = document.querySelector(".header");
+		const homeFold = document.querySelector(".home-fold");
+		
+		window.addEventListener("load", (event) => {
+			header.classList.add("header--not-move");
+		});
+		
+		// Set the initial scroll position
+		let lastScrollPosition = 0;
+		// // Add an event listener for the scroll event
+		window.addEventListener("scroll", () => {
+			// Get the current scroll position
+			let currentScrollPosition = window.pageYOffset;
+			
+			let foldOffset = homeFold.offsetHeight;
+			
+			if (currentScrollPosition < foldOffset) {
+				// If the user is scrolling the fold
+				header.classList.add("header--not-move");
+			} else {
+				header.classList.remove("header--not-move");
+			}
+		});
+	</script>
 
 {% endblock %}
