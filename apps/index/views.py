@@ -10,9 +10,11 @@ class IndexTemplateView(TemplateView):
     template_name = "index.html"
 
 class AboutTemplateView(TemplateView):
-    """Main landing page view."""
-
     template_name = "about.html"
+
+
+class ContactTemplateView(TemplateView):
+    template_name = "contact.html"
 
 
 class CallRequestView(CreateView):
