@@ -26,7 +26,7 @@ urlpatterns = [
     path('cms/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     path('', include('apps.index.urls')),
-    path('', include(wagtail_urls)),
+    path('pages/', include(wagtail_urls)),
 ]
 
 if settings.DEBUG:

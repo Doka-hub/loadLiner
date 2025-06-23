@@ -40,6 +40,12 @@ class ContactRequest(models.Model):
     how_did_you_hear_about_us = models.CharField(
         max_length=255, blank=True, verbose_name="How did you hear about us"
     )
+    created = models.DateTimeField(
+        auto_now_add=True, verbose_name="Created"
+    )
+    updated = models.DateTimeField(auto_now=True, verbose_name="Updated")
+    status = models.CharField(
+        max_length=50, default="new", verbose_name="Status")
 
     def __str__(self) -> str:
         return f"{self.full_name} ({self.email})"

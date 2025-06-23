@@ -40,7 +40,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             text-rendering: optimizeLegibility;
-            font-feature-settings: "liga", "kern"
+            font-feature-settings: "liga", "kern";
             font-variant-numeric: proportional-nums;
         }
 
@@ -111,9 +111,9 @@
 		<section class="contact-section" id="contact-section">
 			<div class="container container--small">
 				<div class="contact-card">
-                                        <div class="contact-form w-form">
-                                                <form action="/api/v1/contact/" class="contact-form__form" data-name="service contact" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e" data-wf-element-id="4c2b4e86-e6d3-0371-7697-21a6a436882f" data-wf-page-id="6627c0c4b28aa2b76d3d193e" id="wf-form-service-contact" method="post" name="wf-form-service-contact">
-                                                        {% csrf_token %}
+					<div class="contact-form w-form">
+						<form action="/api/v1/contact/" class="contact-form__form" data-name="service contact" data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e" data-wf-element-id="4c2b4e86-e6d3-0371-7697-21a6a436882f" data-wf-page-id="6627c0c4b28aa2b76d3d193e" id="wf-form-service-contact" method="post" name="wf-form-service-contact">
+							{% csrf_token %}
 							<h2 class="contact-card__title hightlight">Select Your Service</h2>
 							<div class="contact-form__radio-row">
 								<label class="radio-button service-field w-radio">
@@ -318,26 +318,28 @@
 		});
 
 
-            // Submit contact form via AJAX
-            Webflow.push(function () {
-                    $("#wf-form-service-contact").on("submit", function (e) {
-                            e.preventDefault();
-                            var form = $(this);
-                            var formData = form.serializeArray();
-                            var serviceValue = formData.find(function (f) { return f.name === "Service"; });
-                            if (serviceValue) {
-                                    form.attr("data-name", serviceValue.value);
-                            }
-                            $.post(form.attr("action"), form.serialize())
-                                .done(function () {
-                                        form.hide();
-                                        $(".contact-form__success").show();
-                                })
-                                .fail(function () {
-                                        $(".contact-form__error").show();
-                                });
-                    });
-            });
+		// Submit contact form via AJAX
+		$("#wf-form-service-contact").on("submit", function (e) {
+			e.preventDefault();
+			alert(123);
+			var form = $(this);
+			var formData = form.serializeArray();
+			var serviceValue = formData.find(function (f) {
+				return f.name === "Service";
+			});
+			if (serviceValue) {
+				form.attr("data-name", serviceValue.value);
+			}
+
+			$.post(form.attr("action"), form.serialize())
+				.done(function () {
+					form.hide();
+					$(".contact-form__success").show();
+				})
+				.fail(function () {
+					$(".contact-form__error").show();
+				});
+		});
 	</script>
 	{% include 'components/footer.html' %}
 {% endblock %}
