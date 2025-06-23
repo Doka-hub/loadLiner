@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "load liner logistics"
+version = "0.1.0"
+description = "Carrier Company"
+authors = ["Doka <dokadair@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
