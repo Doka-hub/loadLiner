@@ -1,7 +1,9 @@
 from django.http import JsonResponse
 from django.views.generic import TemplateView, CreateView
 
-from .models import CallRequest
+from datetime import date
+
+from .models import CallRequest, ContactRequest
 
 
 class IndexTemplateView(TemplateView):
@@ -29,6 +31,46 @@ class CallRequestView(CreateView):
             fullname=request.POST.get("name", ""),
             phone_number=request.POST.get("phone", ""),
             comment=request.POST.get("comment", ""),
+        )
+        return JsonResponse({"status": "ok"})
+
+
+class ContactRequestView(CreateView):
+    """Handle contact form submissions."""
+
+    model = ContactRequest
+    http_method_names = ["post"]
+
+    def post(self, request, *args, **kwargs):
+        start_date_str = request.POST.get("Anticipated Start Date")
+        start_date = None
+        if start_date_str:
+            try:
+                start_date = date.fromisoformat(start_date_str)
+            except ValueError:
+                start_date = None
+
+        pallet_positions = request.POST.get("Pallet-Positions-Requested")
+        if pallet_positions:
+            try:
+                pallet_positions = int(pallet_positions)
+            except ValueError:
+                pallet_positions = None
+
+        self.object = self.model.objects.create(
+            service=request.POST.get("Service", ""),
+            full_name=request.POST.get("Full-name", ""),
+            email=request.POST.get("Email-address", ""),
+            phone_number=request.POST.get("Phone-number", ""),
+            company_name=request.POST.get("Company-name", ""),
+            markets_of_interest=request.POST.get("Markets-of-interest", ""),
+            mode=request.POST.get("Mode", ""),
+            industry=request.POST.get("Industry", ""),
+            temperature_requirement=request.POST.get("Temperature-Requirement", ""),
+            pallet_positions_requested=pallet_positions,
+            anticipated_start_date=start_date,
+            message=request.POST.get("Message", ""),
+            how_did_you_hear_about_us=request.POST.get("How-did-you-hear-about-us", ""),
         )
         return JsonResponse({"status": "ok"})
 
