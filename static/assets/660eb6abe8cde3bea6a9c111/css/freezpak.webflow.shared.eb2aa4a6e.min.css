@@ -5560,7 +5560,6 @@ label {
 
     .nav-menu {
         height: calc(100vh - 52px);
-        margin-top: 52px
     }
 
     .nav-menu__actions {
