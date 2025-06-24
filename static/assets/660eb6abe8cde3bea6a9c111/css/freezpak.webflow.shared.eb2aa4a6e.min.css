@@ -3007,7 +3007,7 @@ label {
 .brand {
     flex: none;
     width: auto;
-    height: 32px
+    height: 64px
 }
 
 .brand:focus-visible, .brand[data-wf-focus-visible] {
@@ -5534,8 +5534,8 @@ label {
 
     .navbar {
         min-height: 52px;
-        padding-top: 8px;
-        padding-bottom: 8px
+        padding-top: 16px;
+        padding-bottom: 16px
     }
 
     .container {
@@ -5676,7 +5676,7 @@ label {
     }
 
     .detail-fold {
-        padding-top: 84px;
+        padding-top: 110px;
         padding-bottom: 32px
     }
 

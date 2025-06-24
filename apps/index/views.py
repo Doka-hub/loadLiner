@@ -1,7 +1,7 @@
+from datetime import date
+
 from django.http import JsonResponse
 from django.views.generic import TemplateView, CreateView
-
-from datetime import date
 
 from .models import CallRequest, ContactRequest
 
@@ -11,12 +11,23 @@ class IndexTemplateView(TemplateView):
 
     template_name = "index.html"
 
+
 class AboutTemplateView(TemplateView):
     template_name = "about.html"
 
 
 class ContactTemplateView(TemplateView):
     template_name = "contact.html"
+
+
+class ServiceTemplateView(TemplateView):
+    template_name = 'services_transportation.html'
+
+    def get_template_names(self):
+        """Return the template name based on the service slug."""
+        service_slug = self.kwargs.get("service_slug", "")
+        print(service_slug)
+        return [f"services_{service_slug}.html"] if service_slug else ["services/default.html"]
 
 
 class CallRequestView(CreateView):
