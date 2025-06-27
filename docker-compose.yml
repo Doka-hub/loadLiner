@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: gunicorn loadLiner.wsgi:application --bind 0.0.0.0:8000
+    env_file:
+      - .env
+    volumes:
+      - static_volume:/app/staticfiles
+    depends_on:
+      - db
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - static_volume:/app/staticfiles
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - "8000:80"
+    depends_on:
+      - web
+
+  db:
+    image: postgres:15-alpine
+    env_file:
+      - .env.db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  static_volume:
+  postgres_data:
