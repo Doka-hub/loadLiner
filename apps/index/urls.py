@@ -2,6 +2,7 @@ from django.urls import path
 
 from .views import (
     IndexTemplateView,
+    PrivacyPolicyTemplateView,
     AboutTemplateView,
     ContactTemplateView,
     ServiceTemplateView,
@@ -13,6 +14,7 @@ from .views import (
 
 urlpatterns = [
     path("", IndexTemplateView.as_view(), name="index"),
+    path("privacy-policy/", PrivacyPolicyTemplateView.as_view(), name="privacy_policy"),
     path("about/", AboutTemplateView.as_view(), name="about"),
     path("contact/", ContactTemplateView.as_view(), name="contact"),
     path("services/<service_slug>/", ServiceTemplateView.as_view(), name="services"),

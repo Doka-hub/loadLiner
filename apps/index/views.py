@@ -12,6 +12,12 @@ class IndexTemplateView(TemplateView):
     template_name = "index.html"
 
 
+class PrivacyPolicyTemplateView(TemplateView):
+    """Main landing page view."""
+
+    template_name = "privacy-policy.html"
+
+
 class AboutTemplateView(TemplateView):
     template_name = "about.html"
 
