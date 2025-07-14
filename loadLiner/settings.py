@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'taggit',
 
     'apps.index.apps.IndexConfig',
-    'apps.cms.apps.CmsConfig',
 ]
 
 MIDDLEWARE = [
