@@ -112,52 +112,6 @@
             filter: grayscale(0);
         }
 
-        /* History scrollbar styling */
-        .detail__history-scroll::-webkit-scrollbar {
-            width: 7px;
-            height: 7px;
-        }
-
-        .detail__history-scroll::-webkit-scrollbar-track {
-            background-color: transparent;
-        }
-
-        .detail__history-scroll::-webkit-scrollbar-thumb {
-            background: transparent;
-        }
-
-        <
-        style >
-        .why-choose {
-            padding: 80px 0;
-            background-color: #f7f8fa;
-        }
-
-        .why-choose__block {
-            margin-bottom: 40px;
-        }
-
-        .why-choose__block p {
-            margin: 0 0 10px;
-        }
-
-        .why-choose__list {
-            padding-left: 20px;
-            list-style: disc;
-            color: #333;
-        }
-
-        .why-choose__list li {
-            margin-bottom: 8px;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
     </style>
 
     </style>
@@ -178,8 +132,6 @@
                          loading="lazy"/>
                 </div>
                 <p class="detail-fold__description detail-fold__description--center title-2">
-                    {#					Born in 1961 from the Saoud family’s deep roots in the food trade, Load Liner#}
-                    {#					now re-imagines cold-chain logistics with bespoke, industry-specific solutions.#}
                     Founded in June 2023, Load Liner Logistics was built on a clear mission: to bring flexibility,
                     speed, and transparency to modern freight logistics. As a new-generation carrier and dispatching
                     partner, we leverage technology and a hands-on approach to deliver reliable, end-to-end shipping
@@ -188,168 +140,6 @@
             </div>
         </div>
 
-        <!-- ========= HISTORY TIMELINE (fresh copy) ========= -->
-        <div class="detail__history">
-            <div class="container">
-                <p class="detail__history-title title-1">A Bit of History</p>
-            </div>
-
-            <div class="detail__history-scroll">
-                <div class="container container--detail-scroll">
-                    <!-- 1960s -->
-                    <div class="detail__history-card">
-                        <div class="detail__card-content">
-                            <div class="detail__card-header">
-                                <p class="title-2">1960s</p>
-                                <div class="div-block"></div>
-                            </div>
-                            <p class="body-1 body-1--medium">
-                                <strong>Humble Roots.</strong> A single 5 000-sq ft produce warehouse
-                                in New Jersey set the cornerstone for today’s cold-chain network.
-                            </p>
-                        </div>
-                        <div class="detail__card-icon">
-                            <!-- home -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
-                                 stroke-width="2" fill="none" stroke-linecap="round"
-                                 stroke-linejoin="round">
-                                <path d="M3 9l9-6 9 6v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline points="9 22 9 12 15 12 15 22"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- 1970s -->
-                    <div class="detail__history-card">
-                        <div class="detail__card-content">
-                            <div class="detail__card-header">
-                                <p class="title-2">1970s</p>
-                                <div class="div-block"></div>
-                            </div>
-                            <p class="body-1 body-1--medium">
-                                <strong>Rolling Cold.</strong> First fleet of refrigerated trucks
-                                connected farms to regional grocers overnight.
-                            </p>
-                        </div>
-                        <div class="detail__card-icon">
-                            <!-- truck -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
-                                 stroke-width="2" fill="none" stroke-linecap="round"
-                                 stroke-linejoin="round">
-                                <rect x="1" y="3" width="15" height="13" rx="2" ry="2"/>
-                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                                <circle cx="5.5" cy="18.5" r="2.5"/>
-                                <circle cx="18.5" cy="18.5" r="2.5"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- 1990s -->
-                    <div class="detail__history-card">
-                        <div class="detail__card-content">
-                            <div class="detail__card-header">
-                                <p class="title-2">1990s</p>
-                                <div class="div-block"></div>
-                            </div>
-                            <p class="body-1 body-1--medium">
-                                <strong>New Generation.</strong> Second-gen leadership invested in
-                                barcode inventory and 24/7 operations.
-                            </p>
-                        </div>
-                        <div class="detail__card-icon">
-                            <!-- users -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
-                                 stroke-width="2" fill="none" stroke-linecap="round"
-                                 stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- 2000s -->
-                    <div class="detail__history-card">
-                        <div class="detail__card-content">
-                            <div class="detail__card-header">
-                                <p class="title-2">2000s</p>
-                                <div class="div-block"></div>
-                            </div>
-                            <p class="body-1 body-1--medium">
-                                <strong>Rebrand &amp; Automation.</strong> Relaunched as Load Liner
-                                and opened the first fully automated freezer with AS/RS cranes.
-                            </p>
-                        </div>
-                        <div class="detail__card-icon">
-                            <!-- refresh-ccw -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
-                                 stroke-width="2" fill="none" stroke-linecap="round"
-                                 stroke-linejoin="round">
-                                <polyline points="1 4 1 10 7 10"/>
-                                <polyline points="23 20 23 14 17 14"/>
-                                <path d="M20.49 9A9 9 0 0 0 5.63 5.5L1 10"/>
-                                <path d="M3.51 15A9 9 0 0 0 18.37 18.5L23 14"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- 2010s -->
-                    <div class="detail__history-card">
-                        <div class="detail__card-content">
-                            <div class="detail__card-header">
-                                <p class="title-2">2010s</p>
-                                <div class="div-block"></div>
-                            </div>
-                            <p class="body-1 body-1--medium">
-                                <strong>Nationwide Reach.</strong> Added West Coast and Gulf mega-sites,
-                                giving clients two-day coverage across the U.S.
-                            </p>
-                        </div>
-                        <div class="detail__card-icon">
-                            <!-- map -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
-                                 stroke-width="2" fill="none" stroke-linecap="round"
-                                 stroke-linejoin="round">
-                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
-                                <line x1="8" y1="2" x2="8" y2="18"/>
-                                <line x1="16" y1="6" x2="16" y2="22"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- 2020s -->
-                    <div class="detail__history-card detail__history-card--last">
-                        <div class="detail__card-content">
-                            <div class="detail__card-header">
-                                <p class="title-2">2020s</p>
-                                <div class="div-block"></div>
-                            </div>
-                            <p class="body-1 body-1--medium">
-                                <strong>Greener Future.</strong> Solar roofs, hydrogen forklifts and AI
-                                route-planning push us—and our partners—toward net-zero supply chains.
-                            </p>
-                        </div>
-                        <div class="detail__card-icon">
-                            <!-- sun -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor"
-                                 stroke-width="2" fill="none" stroke-linecap="round"
-                                 stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="5"/>
-                                <line x1="12" y1="1" x2="12" y2="3"/>
-                                <line x1="12" y1="21" x2="12" y2="23"/>
-                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                                <line x1="1" y1="12" x2="3" y2="12"/>
-                                <line x1="21" y1="12" x2="23" y2="12"/>
-                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- ========= OVERVIEW / STATS (re-worded) ========= -->
         <div class="detail-content detail-content--about">
@@ -521,78 +311,103 @@
         </div>
         <!-- ========== WHY CHOOSE US SECTION ========== -->
         <section class="why-choose">
-            <div class="container container--medium">
-                <h2 class="section-title title-1">Why Choose Load Liner Logistics?</h2>
+            <div class="detail-content detail-content--about">
+                <div class="container container--detail-columns container--equals container--medium">
+                    <div class="detail-content__column">
+                        <p class="detail-content__description detail-content__description--small title-2">
+                            Founded in June 2023, Load Liner Logistics was built on a clear mission: to bring
+                            flexibility, speed, and transparency to modern freight logistics. As a new-generation
+                            carrier and dispatching partner, we leverage technology and a hands-on approach to deliver
+                            reliable, end-to-end shipping solutions across the U.S.
+                        </p>
+                        <ul class="detail-content__list w-list-unstyled">
+                            <li><p class="detail-content__data hightlight">2023</p>
+                                <p class="detail-content__label title-3">COMPANY FOUNDED</p></li>
+                            <li><p class="detail-content__data hightlight">24/7</p>
+                                <p class="detail-content__label title-3">LIVE DISPATCH & SUPPORT</p></li>
+                            <li><p class="detail-content__data hightlight">0</p>
+                                <p class="detail-content__label title-3">EXCUSES GIVEN</p></li>
+                        </ul>
+                    </div>
 
-                <div class="why-choose__block">
-                    <p class="title-2">About Us</p>
-                    <p class="body-1 body-1--medium">
-                        Founded in June 2023, Load Liner Logistics was built on a clear mission: to bring flexibility,
-                        speed, and transparency to modern freight logistics. As a new-generation carrier and dispatching
-                        partner, we leverage technology and a hands-on approach to deliver reliable, end-to-end shipping
-                        solutions across the U.S.
-                    </p>
-                </div>
-
-                <div class="why-choose__block">
-                    <p class="title-2">Our Vision</p>
-                    <p class="body-1 body-1--medium">
-                        To simplify logistics for carriers and brokers alike by offering responsive service, optimized
-                        routes, and a commitment to communication.
-                    </p>
-                </div>
-
-                <div class="why-choose__block">
-                    <p class="title-2">What We Do</p>
-                    <ul class="why-choose__list">
-                        <li><strong>Full Truckload (FTL) & Reefer Services:</strong> From dry freight to
-                            temperature-controlled loads, we ensure safe and on-time delivery coast to coast.
+                    <ul class="about-list w-list-unstyled">
+                        <!-- 1. Modern Approach -->
+                        <li>
+                            <div class="about-list__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <p class="about-list__title title-2">Modern Approach</p>
+                            <p class="about-list__text body-1 body-1--medium">
+                                We operate with efficiency, speed, and adaptability in every shipment we handle.
+                            </p>
                         </li>
-                        <li><strong>Carrier & Broker Coordination:</strong> Our team acts as a central hub between
-                            drivers and logistics partners, making sure every load is managed professionally.
+
+                        <!-- 2. Personal Commitment -->
+                        <li>
+                            <div class="about-list__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.4l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+                                </svg>
+                            </div>
+                            <p class="about-list__title title-2">Personal Commitment</p>
+                            <p class="about-list__text body-1 body-1--medium">
+                                We treat each shipment with the care and urgency it deserves.
+                            </p>
                         </li>
-                        <li><strong>Real-Time Support:</strong> Communication is key. We offer updates, issue
-                            resolution, and clear load visibility—24/7.
+
+                        <!-- 3. Strategic Dispatching -->
+                        <li>
+                            <div class="about-list__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <polyline points="9 21 3 21 3 15"/>
+                                    <line x1="21" y1="3" x2="14" y2="10"/>
+                                    <line x1="3" y1="21" x2="10" y2="14"/>
+                                </svg>
+                            </div>
+                            <p class="about-list__title title-2">Strategic Dispatching</p>
+                            <p class="about-list__text body-1 body-1--medium">
+                                We work with trusted carriers across major freight corridors to reduce downtime and
+                                increase delivery reliability.
+                            </p>
+                        </li>
+
+                        <!-- 4. Transparent Operations -->
+                        <li>
+                            <div class="about-list__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                                    <path d="M16 2v4M8 2v4M4 10h16"/>
+                                </svg>
+                            </div>
+                            <p class="about-list__title title-2">Transparent Operations</p>
+                            <p class="about-list__text body-1 body-1--medium">
+                                We provide real-time updates and full visibility from pickup to delivery.
+                            </p>
+                        </li>
+
+                        <!-- 5. Sustainability Mindset -->
+                        <li>
+                            <div class="about-list__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12.79A9 9 0 0 1 11.21 3H21z"/>
+                                    <path d="M3 21a9 9 0 0 0 9-9V3"/>
+                                </svg>
+                            </div>
+                            <p class="about-list__title title-2">Sustainability Mindset</p>
+                            <p class="about-list__text body-1 body-1--medium">
+                                We use optimized routing and fuel-efficient practices to support a greener future.
+                            </p>
                         </li>
                     </ul>
-                </div>
-
-                <div class="why-choose__block">
-                    <p class="title-2">Our Advantages</p>
-                    <ul class="why-choose__list">
-                        <li>🧭 <strong>Modern Approach:</strong> We operate with efficiency, speed, and adaptability.
-                        </li>
-                        <li>🤝 <strong>Personal Commitment:</strong> We treat each shipment with the care and urgency it
-                            deserves.
-                        </li>
-                        <li>📍 <strong>Strategic Dispatching:</strong> We work with trusted carriers across major freight
-                            corridors.
-                        </li>
-                        <li>📊 <strong>Transparent Operations:</strong> We track progress and stay ahead of potential
-                            delays.
-                        </li>
-                        <li>🌱 <strong>Sustainability Mindset:</strong> We use optimized routing and fuel-efficient
-                            options.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="why-choose__block">
-                    <p class="title-2">Fast Facts</p>
-                    <ul class="why-choose__list">
-                        <li><strong>2023:</strong> Company Founded</li>
-                        <li><strong>24/7:</strong> Live Dispatch & Support</li>
-                        <li><strong>Nationwide:</strong> Operating Across Continental U.S.</li>
-                        <li><strong>0 Excuses:</strong> We deliver, or we explain</li>
-                    </ul>
-                </div>
-
-                <div class="why-choose__block">
-                    <p class="title-2">Built for the Road Ahead</p>
-                    <p class="body-1 body-1--medium">
-                        At Load Liner Logistics, we may be a new name—but we’re built on old-school work ethic, modern
-                        tools, and a clear vision: to make logistics smoother for everyone in the supply chain.
-                    </p>
                 </div>
             </div>
         </section>
