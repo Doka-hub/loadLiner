@@ -25,10 +25,6 @@ if ! [ -z "$APP_COMMAND" ]; then
   exit
 fi
 
-if ! [ -z "$APP_CREATE_SUPERUSER" ]; then
-  echo "from django.contrib.auth import get_user_model; User = get_user_model(); bool(User.objects.filter(username='admin').count()) or User.objects.create_superuser('admin', 'admin')" | django-admin shell
-fi
-
 if ! [ -z "$APP_FIXTURES" ]; then
   django-admin loaddata $APP_FIXTURES
 fi
